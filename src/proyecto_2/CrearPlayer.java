@@ -28,6 +28,7 @@ public class CrearPlayer extends javax.swing.JFrame {
         this.setContentPane(fondo);
         initComponents();
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.menuinicio=menuinicio;
         jButton1.setIcon(setIcono("/imagenes/botonGAceptar.png", jButton1));
         jButton2.setIcon(setIcono("/imagenes/botonGRegresar.png", jButton2));
@@ -76,6 +77,13 @@ public class CrearPlayer extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos.");
         }
+    }
+    
+    public void dispose(){
+        if (menuinicio != null) {
+            menuinicio.setVisible(true);
+        }
+        super.dispose();
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

@@ -19,10 +19,12 @@ public class CambiarPass extends javax.swing.JFrame {
     Menu_Inicio menuinicio1;
     Log_In log;
     FondoPanel fondo= new FondoPanel();
+    Menu_Principal menuprincipal;
     public CambiarPass(Menu_Inicio menuinicio1, Log_In log) {
         this.setContentPane(fondo);
         initComponents();
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         this.log = log;
         this.menuinicio1=menuinicio1;
     }

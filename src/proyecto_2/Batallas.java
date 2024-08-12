@@ -26,6 +26,7 @@ public class Batallas extends javax.swing.JFrame {
         this.setContentPane(fondo);
         initComponents();
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         
         this.menuinicio = menuinicio;
         this.log = log;
@@ -34,7 +35,6 @@ public class Batallas extends javax.swing.JFrame {
         this.cuentas = cuentas;
         
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -25,6 +25,7 @@ public class LogsPartida extends javax.swing.JFrame {
         this.setContentPane(fondo);
         initComponents();
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         
         this.menuinicio = menuinicio;
         this.log = log;

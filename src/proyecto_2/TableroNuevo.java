@@ -13,7 +13,9 @@ import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 import javax.swing.BorderFactory;
@@ -588,7 +590,9 @@ public class TableroNuevo extends JPanel{
     
     private void Gane() {
         String mensajeLog = "";
-        Date fecha = new Date();
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat formatoBonito = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        String fecha = formatoBonito.format(calendar.getTime());
         // Ambos sin movimientos
         if (!tieneMovValidos(turnoHeroes) && !tieneMovValidos(!turnoHeroes)) {
             mensajeLog = playerHeroes.getUser() + " usando HEROES ha empatado con " + playerVillanos.getUser() + " porque ambos se quedaron sin movimientos validos.";
@@ -761,7 +765,10 @@ public class TableroNuevo extends JPanel{
     
     //Lo hago aqui por las rondas
     public void rendirse() {
-        Date fecha = new Date();
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat formatoBonito = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        String fecha = formatoBonito.format(calendar.getTime());
+        
         UsuarioContra ganador, perdedor;
         String bandoGanador, bandoPerdedor;
         if (turnoHeroes) {

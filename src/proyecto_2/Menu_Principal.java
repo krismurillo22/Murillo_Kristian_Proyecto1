@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import javax.swing.JFrame;
 
 
 public class Menu_Principal extends javax.swing.JFrame {
@@ -33,6 +34,7 @@ public class Menu_Principal extends javax.swing.JFrame {
         this.setContentPane(fondo);
         initComponents();
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         this.log = log;
         this.menuinicio1=menuinicio1;
         this.inicio = new Inicio();

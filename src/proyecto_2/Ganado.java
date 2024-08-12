@@ -19,13 +19,12 @@ public class Ganado {
     String fecha;
     String win;
     
-    public Ganado(UsuarioContra contrincante, boolean victoria, String bandoUsado, double puntosGanados, Date fechaObj) {
+    public Ganado(UsuarioContra contrincante, boolean victoria, String bandoUsado, double puntosGanados, String fechaObj) {
         this.contrincante = contrincante;
         this.victoria = victoria;
         this.bandoUsado = bandoUsado;
         this.puntosGanados = puntosGanados;
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy HH:mm");
-        this.fecha = formato.format(fechaObj);
+        this.fecha = fechaObj;
     
     }
 

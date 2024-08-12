@@ -7,6 +7,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 /**
@@ -24,6 +25,7 @@ public class Log_In extends javax.swing.JFrame {
         this.setContentPane(fondo1);
         initComponents();
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.menuinicio=menuinicio;
         
         jButton1.setIcon(setIcono("/imagenes/botonGAceptar.png", jButton1));

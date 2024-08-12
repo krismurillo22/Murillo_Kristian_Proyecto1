@@ -10,6 +10,7 @@ import java.awt.GridLayout;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -27,8 +28,7 @@ public class Juego extends javax.swing.JFrame {
 
     public Juego() {
         initComponents();
-        setLocationRelativeTo(null);
-      
+        setLocationRelativeTo(null);      
     }
     
     public Juego(Menu_Inicio menuinicio, Log_In log, Menu_Principal menuprincipal, UsuarioContra playerHeroes, UsuarioContra playerVillanos) {
@@ -36,7 +36,8 @@ public class Juego extends javax.swing.JFrame {
         this.menuinicio = menuinicio;
         this.log = log;
         this.menuprincipal = menuprincipal;
-
+        
+        
         if (menuprincipal.userequipo.equals("Heroe")){
             jLabel1.setText("HEROE: " + log.useractual);
             jLabel4.setText("VILLANO: " + menuprincipal.useroponente);
@@ -44,7 +45,6 @@ public class Juego extends javax.swing.JFrame {
             jLabel1.setText("HEROE: " + menuprincipal.useroponente);
             jLabel4.setText("VILLANO: " + log.useractual);
         } 
-        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         jPanel4.setLayout(new GridLayout(1,1));
         jPanel4.setMinimumSize(new Dimension(750, 750));
         tablero =new TableroNuevo(jTextArea1, jPanel5, jPanel6, cuentas,playerHeroes, playerVillanos, this, menuinicio, menuprincipal);
